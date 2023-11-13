@@ -6,13 +6,12 @@ for (const fieldName of ["name", "number", "email", "city", "postCode", "destTyp
     if (valueName) document.getElementById(fieldName).innerHTML = valueName;
 }
 
-if (urlParams.has("supplies")){
+if (urlParams.has("supplies")) {
     const supplyList = urlParams.get("supplies").split("_");
+    
     let suppliesString = "";
-
     for (const supply of supplyList) {
-        suppliesString += `<li>${supply}</li>`;
+        if (supply) suppliesString += `<li>${supply}</li>`;
     }
-
     document.getElementById("supplies").innerHTML = suppliesString;
 }

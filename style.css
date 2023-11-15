@@ -1,5 +1,5 @@
 body {
-    font: 'Arial';
+    font-family: Arial, Helvetica, sans-serif;
     padding-top: 1%;
     padding-left: 2%;
 }
@@ -9,6 +9,6 @@ th {
     padding-left: 5px;
 }
 
-#info {
+#info, #supplies {
     margin: 0;
 }

@@ -2,7 +2,7 @@ const urlParams = new URLSearchParams(window.location.search);
 
 for (const fieldName of ["name", "number", "email", "city", "postCode", "destType", "address", "info"]) {
     const valueName = urlParams.get(fieldName);
-    if (valueName) document.getElementById(fieldName).innerHTML = `<b>${valueName}</b>`;
+    if (valueName) document.getElementById(fieldName).innerHTML = fieldName.toLowerCase() != "info" ? `<b>${valueName}</b>` : `${valueName}`;
 }
 
 if (urlParams.has("supplies")) {

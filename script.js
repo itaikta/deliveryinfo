@@ -15,12 +15,15 @@ if (urlParams.has("supplies")) {
 
     // Does't really matter if it contains a mix of these, this order is the priority
     if (supplyStr.includes("_")){
+        console.log("AAAAAAA");
         supplyList = supplyStr.split("_");
     }
     else if (supplyStr.includes("\n")) {
-        supplyList = supplyStr.includes("\n");
+        console.log("BBBBBBBB");
+        supplyList = supplyStr.split("\n");
     }
     else {
+        console.log("CCCCCCCC");
         supplyList = supplyStr.split(",");
     }
     
